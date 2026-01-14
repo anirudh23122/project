@@ -3,7 +3,10 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-      <h1>annu</h1>
+      <form className='flex justify-between'>
+        <input type="text" placeholder = "enter value"/>
+      <input type="text" placeholder='enter details'/> 
+      </form>
     </div>
   )
 }
