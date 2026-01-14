@@ -3,19 +3,23 @@ import React from 'react'
 const App = () => {
   return (
     <div className='h-screen bg-black text-white'>
-      <form className='flex p-10 justify-between items-start gap-4'>
+      <form className='flex p-10 justify-between items-start '>
+
        <div className='flex p-10 w-1/2 items-start flex-col gap-4'>
+         
          <input type="text" 
         placeholder = "enter notes  heading"
-        className='px-5 py-2 border-2 rounded'
+        className='px-5 py-2 w-full border-2 outline-none rounded'
         />
-      <input type="text" 
+
+      <textarea
       placeholder='enter details'
-      className='px-5 py-2  border-2 h-20 rounded'
+      className='px-5 py-2 w-full border-2 h-20 outline-none rounded'
       /> 
-      <button className='bg-white text-black px-5 py-2 rounded'>Add Notes</button>
+
+      <button className='bg-white text-black w-full px-5 py-2 outline-none rounded'>Add Notes</button>
        </div>
-      <img className='h-60' src="https://gallery.yopriceville.com/downloadfullsize/send/14426" alt="" />
+      
       </form>
       
     </div>
