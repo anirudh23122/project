@@ -1,9 +1,18 @@
 import React from 'react'
 
 const App = () => {
+const submitHandler =(e) => {
+e.preventDefault()
+console.log("form submitted");
+
+}
+
   return (
     <div className='h-screen bg-black text-white'>
-      <form className='flex p-10 justify-between items-start '>
+      <form onSubmit={(e) => {
+        submitHandler(e)
+      }}
+      className='flex p-10 justify-between items-start '>
 
        <div className='flex p-10 w-1/2 items-start flex-col gap-4'>
          
