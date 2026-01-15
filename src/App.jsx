@@ -8,13 +8,13 @@ console.log("form submitted");
 }
 
   return (
-    <div className='h-screen bg-black text-white'>
+    <div className='h-screen lg:flex bg-black text-white '>
+    
       <form onSubmit={(e) => {
         submitHandler(e)
       }}
-      className='flex p-10 justify-between items-start '>
-
-       <div className='flex p-10 w-1/2 items-start flex-col gap-4'>
+      className='flex p-10 lg:w-1/2 gap-4 flex-col items-start '>
+        <h1 className='text-3xl font-bold'>Add Notes</h1>
          
          <input type="text" 
         placeholder = "enter notes  heading"
@@ -27,9 +27,19 @@ console.log("form submitted");
       /> 
 
       <button className='bg-white text-black font-medium w-full px-5 py-2 outline-none rounded'>Add Notes</button>
-       </div>
+      
       
       </form>
+      <div className=' lg:w-1/2 lg:border-l-2 p-10'>
+       <h1 className='text-3xl font-bold'>Recent Notes</h1>
+       <div className='flex flex-wrap gap-5 mt-5 h-full overflow-auto'>
+        <div className="h-50 w-40 rounded-2xl bg-white"></div>
+        <div className="h-50 w-40 rounded-2xl bg-white"></div>
+        <div className="h-50 w-40 rounded-2xl bg-white"></div>
+        <div className="h-50 w-40 rounded-2xl bg-white"></div>
+
+        </div>
+      </div>
       
     </div>
   )
