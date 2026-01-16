@@ -17,9 +17,11 @@ setTask(isTask)
 setTitle('')
 setDetail('')
 }
+
 const deleteNote =(idx) =>{
-    const copyTask = [...task]
-    copyTask.splice()
+    const isTask = [...task]
+    isTask.splice(idx,1)
+    setTask(isTask)
 }
 
   return (
@@ -30,11 +32,11 @@ const deleteNote =(idx) =>{
       }}
       className='flex p-10 lg:w-1/2 gap-4 flex-col items-start '>
 
-      <h1 className='text-3xl font-bold'>Add Notes</h1>
+      <h1 className='text-3xl font-bold mb-2'>Add Notes</h1>
          
       <input type="text" 
         placeholder = "enter notes  heading"
-        className='px-5 py-2 w-full font-medium border-2 outline-none rounded'
+        className='px-5 py-2 w-full font-medium  border-2 outline-none rounded'
         value={title}
         onChange={(e) =>{
             setTitle(e.target.value)
@@ -43,7 +45,7 @@ const deleteNote =(idx) =>{
 
       <textarea
       placeholder='enter details'
-      className='px-5 py-2 w-full font-medium border-2 h-20 outline-none rounded'
+      className='px-5 py-2 w-full font-medium border-2 h-32 flex items-start flex-row outline-none rounded'
       value={detail}
       onChange={(e) => {
            setDetail(e.target.value)
